@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form } from './styles';
 import Header from '../../components/Header';
+import CharactersList from '../../components/CharactersList';
 
 const Main = () => (
   <>
@@ -13,6 +14,7 @@ const Main = () => (
         />
         <button type="submit">OK</button>
       </Form>
+      <CharactersList />
     </Container>
   </>
 );
