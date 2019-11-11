@@ -21,8 +21,20 @@ const CharacterDetails = () => {
 `;
   const { loading, error, data } = useQuery(CHARACTER);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) {
+    return (
+      <Container>
+        <p>Loading...</p>
+      </Container>
+    );
+  }
+  if (error) {
+    return (
+      <Container>
+        <p>Error :(</p>
+      </Container>
+    );
+  }
   return (
     <Container>
       <img src={data.characters[0].thumbnail} alt={data.characters[0].name} />

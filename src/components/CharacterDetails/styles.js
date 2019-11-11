@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 40px;
+  height: 300px;
   img {
     border-radius: 3px;
     width: 300px;
