@@ -1,28 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Card } from './styles';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
+import { Card } from './styles';
 
-const CharactersList = () => (
-  <Container>
-    <Link to="/character/1">
+const CHARACTERS_LIST = gql`
+  {
+    characters {
+      id
+      name
+      thumbnail
+    }
+  }
+`;
+
+const CharactersList = () => {
+  const { loading, error, data } = useQuery(CHARACTERS_LIST);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
+  return data.characters.map(({ id, name, thumbnail }) => (
+    <Link to={`/character/${id}`} key={id}>
       <Card>
-        <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/3dman442.jpg" alt="3d" />
-        <h2>3-D MAN</h2>
+        <img src={thumbnail} alt={name} />
+        <h2>{name}</h2>
       </Card>
     </Link>
-    <Link to="/character/1">
-      <Card>
-        <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/3dman442.jpg" alt="3d" />
-        <h2>ABDUL ALHAZRED</h2>
-      </Card>
-    </Link>
-    <Link to="/character/1">
-      <Card>
-        <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/3dman442.jpg" alt="3d" />
-        <h2>ALPHA THE ULTIMATE MUTANT</h2>
-      </Card>
-    </Link>
-  </Container>
-);
+  ));
+};
 
 export default CharactersList;

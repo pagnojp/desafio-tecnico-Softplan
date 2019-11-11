@@ -39,3 +39,14 @@ export const Form = styled.form`
     }
   }
 `;
+
+export const ListContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  a {
+    text-decoration: none;
+  }
+`;

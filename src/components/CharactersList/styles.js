@@ -1,22 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  a {
-    text-decoration: none;
-  }
-`;
-
 export const Card = styled.div`
   background-color: #333;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  height: 330px;
+  height: 310px;
   margin: 10px 10px;
   width: 210px;
 
@@ -26,8 +15,7 @@ export const Card = styled.div`
   img {
     border-radius: 3px;
     margin: 10px 10px 0 10px;
-    width: 190px;
-
+    height: 200px;
   }
   h2 {
     color: #FFF;
