@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 20px;
 `;
 
 export const Form = styled.form`
@@ -12,7 +12,7 @@ export const Form = styled.form`
   width: 100%;
   max-width: 400px;
   display: flex;
-  padding: 10px;
+  padding: 0 10px;
   input {
     flex: 1;
     height: 55px;

@@ -5,34 +5,18 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 40px;
 `;
 
 export const Card = styled.div`
-  width: 300px;
+  width: 190px;
   background-color: #333;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   margin: 10px 10px;
-  header {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    div {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    button {
-      background: none;
-      border: 0;
-    }
-  }
   img {
-    width: 64px;
-    padding-top: 20px;
+    width: 190px;
   }
   strong {
     font-size: 24px;
