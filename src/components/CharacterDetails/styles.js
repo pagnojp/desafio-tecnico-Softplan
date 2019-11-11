@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin-top: 40px;
   img {
     border-radius: 3px;
+    width: 300px;
   }
   h2 {
     font-size: 30px;
