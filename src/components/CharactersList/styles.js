@@ -5,9 +5,10 @@ export const Card = styled.div`
   border-radius: 3px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 310px;
   margin: 10px 10px;
-  width: 210px;
+  width: 300px;
 
   &:hover {
     background-color: #444;
@@ -15,6 +16,7 @@ export const Card = styled.div`
   img {
     border-radius: 3px;
     margin: 10px 10px 0 10px;
+    width: 210px;
     height: 200px;
   }
   h2 {
