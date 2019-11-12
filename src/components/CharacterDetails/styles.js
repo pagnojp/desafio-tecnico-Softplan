@@ -11,9 +11,22 @@ export const Container = styled.div`
     width: 300px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 26px;
+    padding: 10px 20px;
     text-transform: uppercase;
   }
+  a {
+    background-color: #DDD;
+    border-radius: 3px;
+    color: #EC1D24;
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 0 10px;
+    text-decoration: none;
+    &:hover {
+      background-color: #CCC;
+    }
+    }
   div {
     display: flex;
     flex-direction: column;

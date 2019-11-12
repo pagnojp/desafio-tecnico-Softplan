@@ -12,6 +12,10 @@ export const FormContainer = styled.div`
   flex-direction: row;
   align-items: center;
   padding-top: 20px;
+  img {
+    border-radius: 3px;
+    width: 221px;
+  }
 `;
 
 
