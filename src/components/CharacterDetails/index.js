@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import { Container } from './styles';
@@ -36,11 +36,26 @@ const CharacterDetails = () => {
     );
   }
   return (
-    <Container>
-      <img src={data.characters[0].thumbnail} alt={data.characters[0].name} />
-      <h2>{data.characters[0].name}</h2>
-      <h3><Link to="/edit/1">Editar Personagem</Link></h3>
-    </Container>
+    <>
+      <Container>
+        <img src={data.characters[0].thumbnail} alt={data.characters[0].name} />
+        <div>
+          <h2>{data.characters[0].name}</h2>
+          <h3>Séries:</h3>
+          <ul>
+            { data.characters[0].series.map(({ name }) => (
+              <li key={name}>
+                -
+                {' '}
+                {name}
+              </li>
+            )) }
+          </ul>
+        </div>
+        {/* <h3><Link to="/edit/1">Editar Personagem</Link></h3> */}
+      </Container>
+
+    </>
   );
 };
 
