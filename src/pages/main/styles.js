@@ -7,6 +7,55 @@ export const Container = styled.div`
   padding-top: 20px;
 `;
 
+export const Card = styled.div`
+  background-color: #333;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 310px;
+  margin: 10px 10px;
+  width: 300px;
+
+  &:hover {
+    background-color: #444;
+  }
+  img {
+    border-radius: 3px;
+    margin: 10px 10px 0 10px;
+    width: 210px;
+    height: 200px;
+  }
+  h2 {
+    color: #FFF;
+    font-size: 20px;
+    padding: 20px;
+  }
+`;
+
+export const CardLocal = styled.div`
+  background-color: #EC1D24;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 310px;
+  margin: 10px 10px;
+  width: 300px;
+
+  img {
+    border-radius: 3px;
+    margin: 10px 10px 0 10px;
+    width: 210px;
+    height: 200px;
+  }
+  h2 {
+    color: #FFF;
+    font-size: 20px;
+    padding: 20px;
+  }
+`;
+
 export const Form = styled.form`
   margin-top: 20px;
   width: 100%;
@@ -21,7 +70,7 @@ export const Form = styled.form`
     font-size: 18px;
     color: #444;
     border-radius: 3px;
-    border: ${(props) => (props.withError ? '2px solid #ff0000' : '1px solid #999')};
+    border: ${(props) => (props.withError ? '2px solid #EC1D24' : '1px solid #999')};
   }
   button {
     height: 50px;
@@ -34,7 +83,7 @@ export const Form = styled.form`
     border-radius: 3px;
     width: 100px;
     &:hover {
-      background-color: #52d89f;
+      background-color: #EC1D24;
       cursor: pointer;
     }
   }
