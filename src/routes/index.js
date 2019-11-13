@@ -11,6 +11,7 @@ const Routes = () => (
     <Route exact path="/" component={Main} />
     <Route path="/character/:id" component={Character} />
     <Route path="/edit/:id" component={EditCharacter} />
+    <Route render={() => <h2>404 página não encontrada :(</h2>} />
   </Switch>
 );
 

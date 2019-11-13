@@ -56,7 +56,6 @@ const CharacterDetails = () => {
           </ul>
         </div>
       </Container>
-
     </>
   );
 };
