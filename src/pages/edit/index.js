@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Redirect } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Header from '../../components/Header';
@@ -32,7 +32,7 @@ function useEdit() {
 function Entry({ addEntry }) {
   const [id, setId] = useState(useParams());
   const [name, setName] = useState('');
-  const [toHome, setToHome] = useState(false);
+  const history = useHistory();
   const handleOnChange = (e) => setName(e.target.value);
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ function Entry({ addEntry }) {
       });
       setId('');
       setName('');
-      setToHome(true);
+      history.push('/');
     }
   };
   const CHARACTER = gql`
@@ -56,10 +56,6 @@ function Entry({ addEntry }) {
   }
 `;
   const { loading, error, data } = useQuery(CHARACTER);
-
-  if (toHome) {
-    return (<Redirect to="/" />);
-  }
 
   if (loading) {
     return (
