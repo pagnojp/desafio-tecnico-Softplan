@@ -54,6 +54,14 @@ export const CardLocal = styled.div`
     font-size: 20px;
     padding: 20px;
   }
+   button {
+    background-color: #DDD;
+    border: 0;
+    border-radius: 3px;
+    color: #EC1D24;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
 `;
 
 export const Form = styled.form`

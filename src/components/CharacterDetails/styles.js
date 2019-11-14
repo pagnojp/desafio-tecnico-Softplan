@@ -44,5 +44,9 @@ export const Container = styled.div`
         line-height: 26px;
       }
     }
+    .backToHome {
+      color: #202020;
+      margin-top: 20px;
+    }
   }
 `;

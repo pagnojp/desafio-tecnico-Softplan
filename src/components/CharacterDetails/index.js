@@ -54,6 +54,7 @@ const CharacterDetails = () => {
               </li>
             )) }
           </ul>
+          <Link className="backToHome" to="/">VOLTAR</Link>
         </div>
       </Container>
     </>
